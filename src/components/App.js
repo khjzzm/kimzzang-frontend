@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "../routes/Home";
+import About from "../routes/About";
+import Login from "../routes/Login";
+import MyPage from "../routes/MyPage";
+import Search from "../routes/Search";
+import NotFound from "../routes/NotFound";
+import Posts from "../routes/Posts";
+import Member from "../routes/Member";
 
 class App extends Component {
 
@@ -10,9 +17,21 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        Hello React
-      </div>
+        <Router>
+          <div>
+            <Switch>
+              {/* 주석 */}
+              <Route exact path="/" component={Home} />
+              <Route path="/about/:username" component={About} />
+              <Route path="/search" component={Search} />
+              <Route path="/postsList" component={Posts} />
+              <Route path="/memberList" component={Member} />
+              <Route path="/login" component={Login} />
+              <Route path="/me" component={MyPage} />
+              <Route component={NotFound} />;
+            </Switch>
+          </div>
+        </Router>
     );
   }
 };
