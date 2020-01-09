@@ -26,3 +26,6 @@ React 컴포넌트 목록
 
 React에서 Redux 전에 배워야 할 8가지
 [https://edykim.com/ko/post/learn-react-before-using-redux/](https://edykim.com/ko/post/learn-react-before-using-redux/)
+
+react router doesn't work in aws s3 bucket
+[https://stackoverflow.com/questions/51218979/react-router-doesnt-work-in-aws-s3-bucket](https://stackoverflow.com/questions/51218979/react-router-doesnt-work-in-aws-s3-bucket)
