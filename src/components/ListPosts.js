@@ -42,7 +42,7 @@ class ListPosts extends Component {
     };
 
     _callAPI2 = async () => {
-        await fetch("/api/list")
+        await fetch(process.env.REACT_APP_API_SERVER_IP+ "/api/list")
             .then(response => response.json())
             .then(result =>
                 this.setState({

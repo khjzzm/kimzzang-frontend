@@ -37,7 +37,7 @@ class InsertMember extends Component {
         };
 
         axios
-            .post("/api/member/insert", JSON.stringify(member), {
+            .post(process.env.REACT_APP_API_SERVER_IP+"/api/member/insert", JSON.stringify(member), {
                 headers: { "Content-Type": "application/json;charset=UTF-8" }
             })
             .then(response => {

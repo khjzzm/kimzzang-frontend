@@ -20,7 +20,7 @@ const InsertMemberH = () => {
             address: {
                 ...form,
                 [e.target.name]: e.target.value
-            }-
+            }
         }
         setForm(nextForm);
     }

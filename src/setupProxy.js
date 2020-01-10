@@ -3,7 +3,7 @@ module.exports = function(app) {
     app.use(
         '/api',
         proxy({
-            target: 'http://localhost:8081',
+            target: "https://52.78.133.52",
             changeOrigin: true,
         })
     );
