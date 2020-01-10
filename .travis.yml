@@ -6,9 +6,6 @@ branches:
   only:
     - master
 
-install:
-  - npm install
-
 script:
   - npm run build
 
@@ -26,6 +23,7 @@ deploy:
     skip_cleanup: true
     acl: public_read
     wait-until-deployed: true
+    local_dir: build
     on:
       repo: khjzzm/kimzzang-frontend #Github 주소
       branch: master
