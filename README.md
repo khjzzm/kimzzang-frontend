@@ -1,4 +1,4 @@
-## React 읽을거리
+# zzang.kim FE [![Build Status](https://travis-ci.org/khjzzm/kimzzang-frontend.svg?branch=master)](https://travis-ci.org/khjzzm/kimzzang-frontend.svg?branch=master)
 
 react/CHANGELOG
 [https://github.com/facebook/react/blob/master/CHANGELOG.md](https://github.com/facebook/react/blob/master/CHANGELOG.md)
