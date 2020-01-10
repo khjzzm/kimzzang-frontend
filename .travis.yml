@@ -5,12 +5,9 @@ node_js:
 branches:
   only:
     - master
-    - 
-install:
-  - npm install
 
 script:
-  - npm run build && npm run deploy && npm run invalidate
+  - npm run build
 
 notifications:
   email:

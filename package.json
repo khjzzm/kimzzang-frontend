@@ -16,11 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build ",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "aws s3 sync ./build s3://kimzzang-frontend-bucket --profile=kimzzang-webservice-deploy",
-    "invalidate": "aws cloudfront create-invalidation --profile=kimzzang-webservice-deploy --distribution-id E2CSBF4NX2575M --paths / /index.html /service-worker.js /manifest.json /favicon.ico"
+    "build": "react-scripts build "
   },
   "eslintConfig": {
     "extends": "react-app"
