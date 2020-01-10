@@ -29,7 +29,7 @@ class ListPosts extends Component {
 
     _callAPI = () => {
         axios
-            .get("/api/list")
+            .get(process.env.REACT_APP_API_SERVER_IP+ "/api/list")
             .then(res => {
                 const postLists = res.data;
                 this.setState({

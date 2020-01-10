@@ -19,7 +19,7 @@ const ListMemberH = () => {
 
 
     const _callAPI2 = async () => {
-        await fetch("/api/member/list")
+        await fetch(process.env.REACT_APP_API_SERVER_IP+"/api/member/list")
             .then(response => response.json())
             .then(result =>
                 setMemberList(result)
