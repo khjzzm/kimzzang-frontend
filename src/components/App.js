@@ -9,6 +9,8 @@ import NotFound from "../routes/NotFound";
 import Posts from "../routes/Posts";
 import Member from "../routes/Member";
 
+import Header from "./Header";
+
 class App extends Component {
 
   componentDidMount() {
@@ -19,6 +21,7 @@ class App extends Component {
     return (
         <Router>
           <div>
+            <Header/>
             <Switch>
               {/* 주석 */}
               <Route exact path="/" component={Home} />
