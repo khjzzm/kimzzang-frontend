@@ -33,7 +33,7 @@ class InsertPosts extends Component {
     };
 
     axios
-      .post(process.env.REACT_APP_API_SERVER_IP+"api/insert", JSON.stringify(posts), {
+      .post(process.env.REACT_APP_API_SERVER_IP+"/api/insert", JSON.stringify(posts), {
         headers: { "Content-Type": "application/json;charset=UTF-8" }
       })
       .then(response => {
