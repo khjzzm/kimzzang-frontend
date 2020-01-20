@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "../routes/About";
-import ColorWithRedux from "../routes/ColorWithRedux";
+// import ColorWithRedux from "../routes/ColorWithRedux";
 import Home from "../routes/Home";
 import Member from "../routes/Member";
 import NotFound from "../routes/NotFound";
@@ -27,7 +27,7 @@ class App extends Component {
               <Route path="/search" component={Search} />
               <Route path="/postsList" component={Posts} />
               <Route path="/memberList" component={Member} />
-              <Route path="/colorWithRedux" component={ColorWithRedux}/>
+              {/*<Route path="/colorWithRedux" component={ColorWithRedux}/>*/}
               <Route component={NotFound} />;
             </Switch>
           </div>
