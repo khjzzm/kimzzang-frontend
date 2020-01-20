@@ -12,7 +12,7 @@ export default {
     }
 };
 
-export const hello = () => {
+export const Default = () => {
     // knobs 만들기
     const big = boolean('big', false);
     const name = text('name', 'Storybook');
