@@ -1,17 +1,10 @@
 import React from 'react';
-import PaletteContainer from '../containers/PaletteContainer';
-import CounterContainer from '../containers/CounterContainer';
-import WaitingListContainer from '../containers/WaitingListContainer';
+
 
 const ColorWithRedux = () => {
     return (
         <div>
-            {/*<Palette selected="red" />*/}
-            <PaletteContainer />
-            {/*<Counter value={0} color="red" />*/}
-            <CounterContainer />
-            {/*<WaitingList />*/}
-            <WaitingListContainer /> {/* **** 교체하기 */}
+            test
         </div>
     );
 };
