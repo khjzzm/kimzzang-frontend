@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "../routes/Home";
 import About from "../routes/About";
-import Search from "../routes/Search";
+import ColorWithRedux from "../routes/ColorWithRedux";
+import Home from "../routes/Home";
+import Member from "../routes/Member";
 import NotFound from "../routes/NotFound";
 import Posts from "../routes/Posts";
-import Member from "../routes/Member";
-import ColorWithRedux from "../routes/ColorWithRedux"
+import Search from "../routes/Search";
 
 import Header from "./Header";
 
