@@ -8,11 +8,11 @@ class ColorWithRedux extends Component {
         return (
             <div>
                 {/*<Palette selected="red" />*/}
-                <PaletteContainer />
+                {/*<PaletteContainer />*/}
                 {/*<Counter value={0} color="red" />*/}
-                <CounterContainer />
+                {/*<CounterContainer />*/}
                 {/*<WaitingList />*/}
-                <WaitingListContainer /> {/* **** 교체하기 */}
+                {/*<WaitingListContainer /> /!* **** 교체하기 *!/*/}
             </div>
         );
     }
