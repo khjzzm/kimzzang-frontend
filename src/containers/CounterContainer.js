@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux'; // **** (1) 불러오기
+import { bindActionCreators } from 'redux';
 import Counter from '../components/Counter';
 import { increment, decrement } from '../store/modules/counter';
 

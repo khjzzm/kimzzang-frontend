@@ -7,6 +7,7 @@ import Member from "../routes/Member";
 import NotFound from "../routes/NotFound";
 import Posts from "../routes/Posts";
 import Search from "../routes/Search";
+import TodosList from "../routes/TodosList";
 
 import Header from "./Header";
 
@@ -28,6 +29,7 @@ class App extends Component {
               <Route path="/postsList" component={Posts} />
               <Route path="/memberList" component={Member} />
               <Route path="/colorWithRedux" component={CWRedux} />
+              <Route path="/TodosList" component={TodosList} />
               <Route component={NotFound} />;
             </Switch>
           </div>

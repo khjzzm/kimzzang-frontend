@@ -13,15 +13,7 @@ const WaitingItem = ({ text, entered, onEnter, onLeave }) => {
     );
 };
 
-const WaitingList = ({
-                         input, // **** 추가됨
-                         waitingList,
-                         onChange, // **** 추가됨
-                         onSubmit, // **** 추가됨
-                         onEnter,
-                         onLeave,
-                     }) => {
-    // **** 데이터를 컴포넌트 리스트로 변환
+const WaitingList = ({waitingList, input, onChange, onSubmit ,onEnter, onLeave }) => {
     const waitingItems = waitingList.map(w => (
         <WaitingItem
             key={w.id}
