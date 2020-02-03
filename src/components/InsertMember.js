@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+import * as api from "../lib/api/member";
+
 class InsertMember extends Component {
     constructor(props) {
         super(props);
@@ -36,11 +38,7 @@ class InsertMember extends Component {
             }
         };
 
-        axios
-            .post(process.env.REACT_APP_API_SERVER_IP+"/api/member/insert", JSON.stringify(member), {
-                headers: { "Content-Type": "application/json;charset=UTF-8" }
-            })
-            .then(response => {
+        api.insertMember(member).then(response => {
                 if (response.status === 200) {
                     alert(response.status);
                     window.location.reload(true);

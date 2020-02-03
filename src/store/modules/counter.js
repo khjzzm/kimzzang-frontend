@@ -19,6 +19,9 @@ const initialState = {
 export default function counter(state = initialState, action) {
     switch (action.type) {
         case CHANGE_COLOR:
+            // return Object.assign({}, state, {
+            //     color: action.color
+            // })
             return {
                 ...state,
                 color: action.color,

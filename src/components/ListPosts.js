@@ -5,10 +5,22 @@ import "./ListPosts.css";
 import { Table, TableBody, TableRow, TableCell } from "@material-ui/core";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
+import * as api from "../lib/api/post";
+
 class ListPosts extends Component {
-    constructor(props) {
+
+    getPostsList = () => {
+        api.postsList().then(response => response.json())
+        .then(result =>
+            this.setState({
+                postList: result
+            })
+        );
+    }
+
+        constructor(props) {
         super(props);
-        this.state = {
+            this.state = {
             postList: [],
             completed: 0
         };
@@ -17,7 +29,8 @@ class ListPosts extends Component {
     componentDidMount() {
         this.timer = setInterval(this._progress, 20);
         // this._callAPI();
-        this._callAPI2();
+        // this._callAPI2();
+        this.getPostsList();
     }
 
     _progress = () => {

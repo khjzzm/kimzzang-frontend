@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import axios from "axios";
+
+import * as api from "../lib/api/post";
 
 class InsertPosts extends Component {
   constructor(props) {
@@ -32,16 +33,23 @@ class InsertPosts extends Component {
       content: this.state.content
     };
 
-    axios
-      .post(process.env.REACT_APP_API_SERVER_IP+"/api/insert", JSON.stringify(posts), {
-        headers: { "Content-Type": "application/json;charset=UTF-8" }
-      })
-      .then(response => {
-          if(response.status===200){
-            alert(response.status);
-            window.location.reload(true);
-        }
-        });
+    api.insertPost(posts).then(response => {
+      if(response.status===200){
+        alert(response.status);
+        window.location.reload(true);
+    }
+    });
+
+    // axios
+    //   .post(process.env.REACT_APP_API_SERVER_IP+"/api/insert", JSON.stringify(posts), {
+    //     headers: { "Content-Type": "application/json;charset=UTF-8" }
+    //   })
+    //   .then(response => {
+    //       if(response.status===200){
+    //         alert(response.status);
+    //         window.location.reload(true);
+    //     }
+    //     });
   };
 
   render() {

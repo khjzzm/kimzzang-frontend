@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 
+import * as api from "../lib/api/member";
+
 class ListMember extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         memberList: [],
-    //         completed: 0
-    //     };
-    // }
+    getMemberList = () => {
+        api.memberList().then(response => response.json())
+        .then(result =>
+            this.setState({
+                postList: result
+            })
+        );
+    }
 
     state = {
         memberList: [],
@@ -16,7 +19,8 @@ class ListMember extends Component {
     //Propertly Initializer Syntax를 사용한 메서드
 
     componentDidMount() {
-        this._callAPI2();
+        this.getMemberList();
+        // this._callAPI2();
     }
 
     _progress = () => {

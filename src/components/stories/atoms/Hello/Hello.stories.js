@@ -14,7 +14,7 @@ export default {
 
 export const Default = () => {
     // knobs 만들기
-    const big = boolean('big', false);
+    const big = boolean('big', false, 'Group 1');
     const name = text('name', 'Storybook');
     return (
         <Hello
