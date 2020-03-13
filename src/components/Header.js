@@ -13,6 +13,8 @@ class Header extends Component {
                 <NavLink to="/memberList" className="item" activeClassName="active">memberList</NavLink>
                 <NavLink to="/colorWithRedux" className="item" activeClassName="active">colorWithRedux</NavLink>
                 <NavLink to="/TodosList" className="item" activeClassName="active">TodosList</NavLink>
+                <NavLink to="/Contact" className="item" activeClassName="active">Contact</NavLink>
+                <NavLink to="/Infinite" className="item" activeClassName="active">Infinite</NavLink>
             </div>
         )
     }

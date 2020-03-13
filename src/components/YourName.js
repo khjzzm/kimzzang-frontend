@@ -1,8 +1,16 @@
-import React from 'react';
+import React,  { useEffect } from 'react';
 import AlertBox from './AlertBox'
 
 // 비구조화 할당 문법: https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 const YourName = ({ name, age }) => {
+   
+    useEffect(() => {
+        console.log('effect');
+        return () => {
+          console.log('cleanup');
+        };
+    });
+
     return (
         <div>
             안녕하세요! 당신의 이름은 <b>{name}</b> 입니다.

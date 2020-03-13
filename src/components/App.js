@@ -8,6 +8,8 @@ import NotFound from "../routes/NotFound";
 import Posts from "../routes/Posts";
 import Search from "../routes/Search";
 import TodosList from "../routes/TodosList";
+import Contact from "../routes/Contact";
+import Infinite from "../routes/Infinite";
 
 import Header from "./Header";
 
@@ -30,6 +32,8 @@ class App extends Component {
               <Route path="/memberList" component={Member} />
               <Route path="/colorWithRedux" component={CWRedux} />
               <Route path="/TodosList" component={TodosList} />
+              <Route path="/Contact" component={Contact} />
+              <Route path="/Infinite" component={Infinite} />
               <Route component={NotFound} />;
             </Switch>
           </div>
