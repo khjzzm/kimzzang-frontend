@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import PersonalBlog from "../components/page/home";
 
-const HomePage = (props) => {
+const HomePage = () => {
     return (
         <Layout>
             <SEO/>

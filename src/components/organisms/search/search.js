@@ -1,14 +1,12 @@
-import React, { useReducer, useEffect } from 'react';
+import React, { useReducer } from 'react';
 import SearchReducer, { initialState } from './searchReducer';
 import { Scrollbars } from 'react-custom-scrollbars';
-import { rebuildIndex } from './searchIndexBuilderFunction';
 import PostList from '../../molecules/post-list/postList';
 import {
     SearchWrapper,
     SearchForm,
     SearchResult,
     NoResult,
-    SearchResultContainer,
 } from './search.style';
 
 function Search() {
@@ -52,7 +50,7 @@ function Search() {
     //     }
     // }, [dataset]);
 
-    const { totalData, searchResults, searchQuery } = state;
+    const { searchResults, searchQuery } = state;
     const queryResults = searchResults;
 
     return (
@@ -66,7 +64,7 @@ function Search() {
                 />
             </SearchForm>
             <SearchResult>
-                {queryResults.length == 0 && searchQuery !== '' ? (
+                {queryResults.length === 0 && searchQuery !== '' ? (
                     <NoResult>No result found</NoResult>
                 ) : (
                     ''
