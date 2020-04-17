@@ -2,7 +2,7 @@ import React from 'react';
 import Sticky from 'react-stickynode';
 import {ThemeProvider} from 'styled-components';
 import {theme} from '../theme/index';
-import ResetCss from './reset-css';
+import ResetCss from './resetCss';
 import Navbar from './organisms/navbar/navbar';
 import Footer from './organisms/footer/footer';
 
