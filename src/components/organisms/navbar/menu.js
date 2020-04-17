@@ -18,7 +18,7 @@ const Menu = ({items, className, ...props}) => {
                     {item.external ? (
                         <a href={item.url}>{item.label}</a>
                     ) : (
-                        <Link to={item.url} activeClassName="active-link">
+                        <Link to={item.url} className="active-link">
                             {item.label}
                         </Link>
                     )}

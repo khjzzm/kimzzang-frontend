@@ -1,16 +1,18 @@
 import React from 'react';
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Contact from "../components/page/contact";
 
-const Contact = (props) => {
+const ContactPage = () => {
     return (
         <Layout>
             <SEO
                 title="Contact Us"
                 description="StoryHub is a beautiful Gatsby Blog theme designed to showcase your work in style. Perfect for designers, artists, photographers and developers to use for their portfolio website."
             />
+            <Contact/>
         </Layout>
     );
 };
 
-export default Contact;
+export default ContactPage;
