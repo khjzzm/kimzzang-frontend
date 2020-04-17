@@ -1,8 +1,8 @@
 import React, { useReducer, useEffect } from 'react';
-import SearchReducer, { initialState } from './search-reducer';
+import SearchReducer, { initialState } from './searchReducer';
 import { Scrollbars } from 'react-custom-scrollbars';
-import { rebuildIndex } from './search-index-builder-function';
-import PostList from '../../molecules/post-list/post-list';
+import { rebuildIndex } from './searchIndexBuilderFunction';
+import PostList from '../../molecules/post-list/postList';
 import {
     SearchWrapper,
     SearchForm,

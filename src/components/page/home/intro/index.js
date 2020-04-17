@@ -1,5 +1,5 @@
 import React from 'react';
-import SocialProfile from '../../../molecules/social-profile/social-profile';
+import SocialProfile from '../../../molecules/social-profile/socialProfile';
 
 import {
     IntroWrapper,

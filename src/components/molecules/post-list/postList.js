@@ -8,7 +8,7 @@ import {
     PostMeta,
     PostDate,
     PostTags,
-} from './post-list.style';
+} from './postList.style';
 
 
 const PostList = ({image, title, url, date, tags, className, imageType, ...props}) => {

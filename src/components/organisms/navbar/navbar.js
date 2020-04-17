@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import {DrawerProvider} from '../../molecules/drawer/drawer-context';
+import {DrawerProvider} from '../../molecules/drawer/drawerContext';
 import {Link} from "react-router-dom";
 import { IoIosSearch, IoIosClose } from 'react-icons/io';
 import Menu from './menu';
-import MobileMenu from './mobile-menu';
+import MobileMenu from './mobileMenu';
 import SearchContainer from '../search/search';
 import HeaderWrapper, {
     NavbarWrapper,

@@ -3,7 +3,7 @@ import {
     SocialProfileWrapper,
     SocialProfileItem,
     Tooltip,
-} from './social-profile.style';
+} from './socialProfile.style';
 
 
 const SocialProfile = ({items, ...props}) => {
