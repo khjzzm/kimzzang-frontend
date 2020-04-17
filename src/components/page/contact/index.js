@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Formik, FormikProps, Form} from 'formik';
+import {Formik, Form} from 'formik';
 import * as Yup from 'yup';
 import Input from '../../atoms/input/input';
 import Button from '../../atoms/button/button';
