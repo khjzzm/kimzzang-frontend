@@ -20,7 +20,7 @@ const ImageCard = ({image, title, url, className, imageType, readTime, ...props}
             <Link to={url}>
                 {image == null ? null : (
                     <PostPreview className="post_preview">
-                        <img src={image}/>
+                        <img src={image} alt={"temp"}/>
                     </PostPreview>
                 )}
 

@@ -77,7 +77,7 @@ const Posts = () => {
                             title="Load more"
                             type="submit"
                             onClick={_fetchMoreData}
-                            isLoading={load.loading == true ? true : false}
+                            isLoading={load.loading === true ? true : false}
                             loader="Loading.."
                         />
                     ) : (
