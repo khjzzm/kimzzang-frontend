@@ -1,12 +1,30 @@
 import React, {useEffect, useState} from 'react';
+import Masonry from 'react-masonry-component';
 import * as api from "../../../../lib/api/post";
+import ImageCard from "../../../molecules/image-card/imageCard";
+import Button from "../../../atoms/button/button";
 
-import PostCardMinimal from '../../../molecules/post-card-minimal/psotCardMinimal';
-import BlogPostsWrapper, { SecTitle } from './style';
+import BlogPostsWrapper, {
+    PostRow,
+    PostCol,
+    SecTitle,
+    LoadMoreButton,
+    SectTitleWrapper,
+    SecSubTitle,
+} from './style';
+
 
 const Posts = () => {
 
     const [posts, setPosts] = useState([]);
+    const [postCnt, setPostCnt] = useState(0);
+    const [state, setState] = useState({
+        visibile: 3,
+    });
+
+    const [load, setload] = useState({
+        loading: false,
+    });
 
     useEffect(()=>{
         _callPostList();
@@ -16,27 +34,58 @@ const Posts = () => {
         api.postsList().then(response =>{
             setPosts(response.data);
         });
+        api.postCnt().then(response =>{
+            setPostCnt(response.data);
+        })
+    };
+
+    const _fetchMoreData = () => {
+        setload({ loading: true });
+
+        setTimeout(function () {
+            setState((prev) => {
+                return { visibile: prev.visibile + 6 };
+            });
+            setload({ loading: false });
+        }, 1000);
     };
 
     return (
         <BlogPostsWrapper>
-            <SecTitle>Leatest Stories</SecTitle>
+            <SectTitleWrapper>
+                <SecTitle>What we've been up to</SecTitle>
+                <SecSubTitle>StoryHub is a blazing fast blog template. </SecSubTitle>
+            </SectTitleWrapper>
 
-            {posts.map((post) => {
-                console.log(post);
-                return (
-                    <PostCardMinimal
-                        key={post.id}
-                        title={post.title}
-                        image={post.img}
-                        // url={node.fields.slug}
-                        description={post.content}
-                        date={post.modifiedDate}
-                        // tags={node.frontmatter.tags}
-                    />
-                );
-            })}
+            <PostRow>
+                <Masonry className="showcase">
+                    {posts.slice(0, state.visibile).map((post) => {
+                        // console.log(post);
+                        return (
+                            <PostCol key={post.id}>
+                                <ImageCard
+                                    title={post.title}
+                                    image={post.img}
 
+                                ></ImageCard>
+                            </PostCol>
+                        );
+                    })}
+                </Masonry>
+                <LoadMoreButton>
+                    {state.visibile < postCnt ? (
+                        <Button
+                            title="Load more"
+                            type="submit"
+                            onClick={_fetchMoreData}
+                            isLoading={load.loading == true ? true : false}
+                            loader="Loading.."
+                        />
+                    ) : (
+                        <p>No more posts</p>
+                    )}
+                </LoadMoreButton>
+            </PostRow>
         </BlogPostsWrapper>
     );
 };
