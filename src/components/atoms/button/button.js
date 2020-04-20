@@ -28,7 +28,7 @@ const Button = ({type, title, icon, disabled, iconPosition, onClick, loader, isL
         );
 
     // set icon position
-    const position: string = iconPosition || 'right';
+    const position = iconPosition || 'right';
 
     const LoadingIcon = () => {
         return (

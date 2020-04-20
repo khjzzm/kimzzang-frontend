@@ -5,6 +5,8 @@ import {theme} from '../theme/index';
 import ResetCss from './resetCss';
 import Navbar from './organisms/navbar/navbar';
 import Footer from './organisms/footer/footer';
+import ScrollToTop from 'react-scroll-up';
+import ScrollUpButton from "./molecules/scroll-up-button/scroll-up-button";
 
 const Layout = ({children}) => {
     return (
@@ -19,6 +21,14 @@ const Layout = ({children}) => {
                     Copyright &copy; {new Date().getFullYear()}
                     <a href="https://zzang.kim/"> ZZM, Inc.</a>
                 </Footer>
+                <ScrollToTop
+                    showUnder={300}
+                    duration={700}
+                    easing="easeInOutCubic"
+                    style={{bottom: 30, right: 20}}
+                >
+                    <ScrollUpButton/>
+                </ScrollToTop>
             </>
         </ThemeProvider>
     );
