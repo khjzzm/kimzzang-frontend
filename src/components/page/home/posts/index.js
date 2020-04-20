@@ -19,7 +19,7 @@ const Posts = () => {
     const [posts, setPosts] = useState([]);
     const [postCnt, setPostCnt] = useState(0);
     const [state, setState] = useState({
-        visibile: 3,
+        visibile: 6,
     });
 
     const [load, setload] = useState({
@@ -60,12 +60,11 @@ const Posts = () => {
             <PostRow>
                 <Masonry className="showcase">
                     {posts.slice(0, state.visibile).map((post) => {
-                        // console.log(post);
                         return (
                             <PostCol key={post.id}>
                                 <ImageCard
                                     title={post.title}
-                                    image={post.img}
+                                    image={post.image}
 
                                 ></ImageCard>
                             </PostCol>
