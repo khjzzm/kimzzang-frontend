@@ -11,7 +11,7 @@ const SocialProfile = ({items, ...props}) => {
             <SocialProfileWrapper {...props}>
                 {items.map((item, index) => (
                     <SocialProfileItem key={index}>
-                        <a href={item.url} aria-label="social profile" target="_blank" rel="noopener">
+                        <a href={item.url} aria-label="social profile" target="_blank" rel="noopener noreferrer">
                             {item.icon || 'icon'}
                         </a>
                         {item.tooltip != null && item.tooltip !== '' ? (
