@@ -1,6 +1,6 @@
 import React from 'react';
 import {MenuItemWrapper, MenuItem} from './navbar.style';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const Menu = ({items, className, ...props}) => {
     // Add all classs to an array
@@ -18,9 +18,9 @@ const Menu = ({items, className, ...props}) => {
                     {item.external ? (
                         <a href={item.url}>{item.label}</a>
                     ) : (
-                        <Link to={item.url} className="active-link">
+                        <NavLink exact to={item.url} activeClassName="active-link">
                             {item.label}
-                        </Link>
+                        </NavLink >
                     )}
                 </MenuItem>
             ))}

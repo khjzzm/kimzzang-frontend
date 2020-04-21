@@ -29,7 +29,7 @@ export const ImageCardWrapper = styled.div`
         transform: translateY(0);
       }
     }
-    .read_time {
+    .hash_tag {
       > span {
         transform: translateY(0);
       }
@@ -110,7 +110,7 @@ export const ReadingTime = styled.div`
     font-size: 13px;
   }
   > span {
-    display: block;
+    display: inline;
     transform: translateY(100%);
     transition-delay: 0.1s;
     transition: 0.35s ease-in-out;

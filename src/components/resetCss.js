@@ -1,6 +1,9 @@
-import { createGlobalStyle } from "styled-components"
+import {createGlobalStyle} from "styled-components"
+
 
 const ResetCss = createGlobalStyle`
+  @font-face { font-family: 'NeoDunggeunmo'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff'); font-weight: normal; font-style: normal; }
+  
   html {
     font-size: 15px;
     box-sizing: border-box;
@@ -51,7 +54,7 @@ const ResetCss = createGlobalStyle`
   }
 
   body {
-    font-family: 'Fira Sans',sans-serif;
+    font-family: NeoDunggeunmo, 'Fira Sans',sans-serif;
     margin: 0;
     padding: 0;
     font-size: 15px;

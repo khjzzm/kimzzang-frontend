@@ -3,9 +3,11 @@ import {Formik, Form} from 'formik';
 import * as Yup from 'yup';
 import Input from '../../atoms/input/input';
 import Button from '../../atoms/button/button';
+import Pay from '../../organisms/pay/pay'
 import {
     ContactWrapper,
     ContactPageTitle,
+    ContactPagePay,
     ContactFromWrapper,
     InputGroup,
 } from './style';
@@ -16,6 +18,8 @@ const SignupSchema = Yup.object().shape({
     email: Yup.string().email('Invalid email').required('Required'),
     message: Yup.string().required('Required'),
 });
+
+
 
 const Contact = () => {
     return (
@@ -40,6 +44,12 @@ const Contact = () => {
                 <>
                     <Form>
                         <ContactWrapper>
+
+                            <ContactPagePay>
+                                <h2>Pay</h2>
+                                <Pay/>
+                            </ContactPagePay>
+
                             <ContactPageTitle>
                                 <h2>Contact</h2>
                                 <p>

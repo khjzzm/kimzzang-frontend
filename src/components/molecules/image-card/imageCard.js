@@ -8,7 +8,7 @@ import {
     ReadingTime,
 } from './imageCard.style';
 
-const ImageCard = ({image, title, url, className, imageType, readTime, ...props}) => {
+const ImageCard = ({image, title, url, className, imageType, hashTag, ...props}) => {
     const addClass = ['featured_card'];
 
     if (className) {
@@ -20,7 +20,7 @@ const ImageCard = ({image, title, url, className, imageType, readTime, ...props}
             <Link to={url}>
                 {image == null ? null : (
                     <PostPreview className="post_preview">
-                        <img src={image} alt={"temp"}/>
+                        <img src={image} alt={"post preview"} width='100%' height='auto'/>
                     </PostPreview>
                 )}
 
@@ -28,8 +28,10 @@ const ImageCard = ({image, title, url, className, imageType, readTime, ...props}
                     <PostTitle className="post_title">
                         <span>{title}</span>
                     </PostTitle>
-                    <ReadingTime className="read_time">
-                        <span>{readTime}</span>
+                    <ReadingTime className="hash_tag">
+                        {hashTag.map((hash) => {
+                            return <span>#{hash} </span>
+                        })}
                     </ReadingTime>
                 </PostDetails>
             </Link>

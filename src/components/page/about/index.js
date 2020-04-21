@@ -1,11 +1,14 @@
 import * as React from 'react';
 import SocialProfile from '../../molecules/social-profile/socialProfile';
 import {
-    IoLogoFacebook,
-    IoLogoTwitter,
+    IoLogoGithub,
     IoLogoInstagram,
-    IoLogoLinkedin,
 } from 'react-icons/io';
+
+import {
+    GiMonkey
+} from 'react-icons/gi';
+
 import {
     AboutWrapper,
     AboutImage,
@@ -16,34 +19,28 @@ import {
 
 const SocialLinks = [
     {
-        icon: <IoLogoFacebook />,
-        url: 'https://www.facebook.com/redqinc/',
-        tooltip: 'Facebook',
-    },
-    {
         icon: <IoLogoInstagram />,
-        url: 'https://www.instagram.com/redqinc/',
+        url: 'https://www.instagram.com/kshzzm/?hl=ko',
         tooltip: 'Instagram',
     },
     {
-        icon: <IoLogoTwitter />,
-        url: 'https://twitter.com/redqinc',
-        tooltip: 'Twitter',
+        icon: <GiMonkey />,
+        url: 'https://kmong.com/gig/191310',
+        tooltip: 'kmong',
     },
     {
-        icon: <IoLogoLinkedin />,
-        url: 'https://www.linkedin.com/company/redqinc/',
-        tooltip: 'Linked In',
-    },
+        icon: <IoLogoGithub />,
+        url: 'https://github.com/khjzzm',
+        tooltip: 'Github',
+    }
 ];
-
 
 const About  = () => {
 
     return (
         <AboutWrapper>
             <AboutPageTitle>
-                <h2>About StoryHub</h2>
+                <h2>Flash Design</h2>
                 <p>
                     StoryHub is a beautiful Gatsby Blog theme designed to showcase your
                     work in style. Perfect for designers, artists, photographers and
@@ -52,23 +49,10 @@ const About  = () => {
             </AboutPageTitle>
 
             <AboutImage>
-
+                <img src={"https://kimzzang-image-bucket.s3.ap-northeast-2.amazonaws.com/images/about.png"} alt={"about"}/>
             </AboutImage>
 
             <AboutDetails>
-                <h2>Hey there, what’s up?</h2>
-                <p>
-                    RedQ Team is a creative agency specializing in building scalable,
-                    high-performance web & mobile application. Our main concern is
-                    creating more value into the application so that can help our
-                    customers to grow their business.
-                </p>
-                <p>
-                    RedQ Team is a creative agency specializing in building scalable,
-                    high-performance web & mobile application. Our main concern is
-                    creating more value into the application so that can help our
-                    customers to grow their business.
-                </p>
 
                 <SocialProfiles>
                     <SocialProfile items={SocialLinks} />

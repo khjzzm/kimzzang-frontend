@@ -14,7 +14,6 @@ import HeaderWrapper, {
     SearchCloseButton,
     NavSearchFromWrapper,
 } from './navbar.style';
-import LogoImage from '../../../images/logo.png';
 
 const MenuItems = [
     {
@@ -56,11 +55,11 @@ const Navbar = ({className, ...props}) => {
         <HeaderWrapper className={addAllClasses.join(' ')} {...props}>
             <NavbarWrapper className="navbar">
                 <DrawerProvider>
-                    <MobileMenu items={MenuItems} logo={LogoImage}/>
+                    <MobileMenu items={MenuItems} logo={"https://kimzzang-image-bucket.s3.ap-northeast-2.amazonaws.com/images/logo.png"}/>
                 </DrawerProvider>
                 <Logo>
                     <Link to="/">
-                        <img src={LogoImage} alt="logo"/>
+                        <img src={"https://kimzzang-image-bucket.s3.ap-northeast-2.amazonaws.com/images/logo.png"} alt="logo"/>
                     </Link>
                 </Logo>
                 <MenuWrapper>

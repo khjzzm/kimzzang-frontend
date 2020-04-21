@@ -36,6 +36,29 @@ export const ContactPageTitle = styled.div`
   }
 `;
 
+export const ContactPagePay = styled.div`
+  margin-bottom: 90px;
+  @media (max-width: 990px) {
+    margin-bottom: 60px;
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: ${themeGet('colors.textColor', '#292929')};
+    line-height: 1.53;
+    margin-bottom: 15px;
+    @media (max-width: 990px) {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 575px) {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+  }
+  
+`;
+
 export const ContactFromWrapper = styled.div`
   position: relative;
   .button {

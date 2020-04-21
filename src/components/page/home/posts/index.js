@@ -53,8 +53,8 @@ const Posts = () => {
     return (
         <BlogPostsWrapper>
             <SectTitleWrapper>
-                <SecTitle>What we've been up to</SecTitle>
-                <SecSubTitle>StoryHub is a blazing fast blog template. </SecSubTitle>
+                <SecTitle>What i've been up to</SecTitle>
+                <SecSubTitle>For good.</SecSubTitle>
             </SectTitleWrapper>
 
             <PostRow>
@@ -64,8 +64,8 @@ const Posts = () => {
                             <PostCol key={post.id}>
                                 <ImageCard
                                     title={post.title}
-                                    image={post.image}
-
+                                    image={post.imagePath}
+                                    hashTag={["flash", "youtube"]}
                                 ></ImageCard>
                             </PostCol>
                         );

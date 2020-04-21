@@ -5,8 +5,6 @@ const initialState = {
 };
 
 function reducer(state, action) {
-    console.log(state);
-    console.log(action);
     switch (action.type) {
         case 'TOGGLE':
             return {

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { themeGet } from '@styled-system/theme-get';
+import {themeGet} from '@styled-system/theme-get';
 
 export const AboutWrapper = styled.div`
   position: relative;
@@ -35,6 +35,7 @@ export const AboutPageTitle = styled.div`
 
 export const AboutImage = styled.div`
   margin-bottom: 90px;
+  text-align: center;
   @media (max-width: 990px) {
     margin-bottom: 60px;
   }
@@ -49,16 +50,16 @@ export const AboutDetails = styled.div`
   margin: 0 auto;
 
   h2 {
-    font-size: 21px;
+    font-size: 30px;
     font-weight: 500;
     color: ${themeGet('colors.textColor', '#292929')};
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     @media (max-width: 990px) {
-      margin-bottom: 30px;
+      margin-bottom: 10px;
     }
     @media (max-width: 767px) {
       font-size: 18px;
-      margin-bottom: 25px;
+      margin-bottom:10px;
     }
   }
 `;

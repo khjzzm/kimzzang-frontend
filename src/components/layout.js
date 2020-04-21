@@ -19,7 +19,7 @@ const Layout = ({children}) => {
                 {children}
                 <Footer>
                     Copyright &copy; {new Date().getFullYear()}
-                    <a href="https://zzang.kim/"> ZZM, Inc.</a>
+                    <a href="https://zzang.kim/"> Flash Design, Inc.</a>
                 </Footer>
                 <ScrollToTop
                     showUnder={300}
