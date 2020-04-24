@@ -23,7 +23,7 @@ const PayCodeGrid = ({image, alt, comment, url,}) => {
                         <MetaIcon>
                             <FaDonate size="23px"/>
                         </MetaIcon>
-                        <MetaText>{comment}</MetaText>
+                        <MetaText dangerouslySetInnerHTML={{__html:comment}}/>
                     </MetaItem>
                 </PostMeta>
             </a>

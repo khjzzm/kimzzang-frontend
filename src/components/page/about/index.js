@@ -53,7 +53,6 @@ const About  = () => {
             </AboutImage>
 
             <AboutDetails>
-
                 <SocialProfiles>
                     <SocialProfile items={SocialLinks} />
                 </SocialProfiles>

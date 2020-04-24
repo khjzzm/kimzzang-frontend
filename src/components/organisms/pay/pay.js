@@ -15,7 +15,7 @@ const Pay = () => {
                     <PayCodeGrid
                         image={"https://kimzzang-image-bucket.s3.ap-northeast-2.amazonaws.com/images/kakaopay.qr.jpg"}
                         alt={"kakaopay"}
-                        comment={"카카오뱅크 3333-12-1357585"}/>
+                        comment={"카카오뱅크 <br/> 3333-12-1357585"}/>
                 </PayshowcaseCol>
                 <PayshowcaseCol>
                     <PayCodeGrid

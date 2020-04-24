@@ -21,11 +21,14 @@ export const PayshowcaseRow = styled.div`
 
 export const PayshowcaseCol = styled.div`
   flex: 0 0 20%;
-  padding: 10px;
+  padding: 0 0 0 10px;
   @media (max-width: 767px) {
     &:nth-child(n + 4) {
       display: none;
     }
+  }
+  @media (max-width: 575px) {
+    padding: 10px 0 0 10px;
   }
 `;
 

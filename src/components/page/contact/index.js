@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import Input from '../../atoms/input/input';
 import Button from '../../atoms/button/button';
 import Pay from '../../organisms/pay/pay'
+import * as api from '../../../lib/api/mail'
 import {
     ContactWrapper,
     ContactPageTitle,
@@ -15,41 +16,32 @@ import {
 
 const SignupSchema = Yup.object().shape({
     firstName: Yup.string().required('Required'),
-    email: Yup.string().email('Invalid email').required('Required'),
+    kakaotalk: Yup.string().required('Required'),
     message: Yup.string().required('Required'),
 });
-
 
 
 const Contact = () => {
     return (
         <Formik
-            initialValues={{firstName: '', email: '', message: ''}}
+            initialValues={{firstName: '', kakaotalk: '', message: ''}}
             onSubmit={(values, actions) => {
                 setTimeout(() => {
                     console.log({values, actions});
                     alert(JSON.stringify(values, null, 2));
+                    api.sendMail(values);
                     actions.setSubmitting(false);
                 }, 700);
             }}
             validationSchema={SignupSchema}
-            render={({
-                         handleChange,
-                         values,
-                         errors,
-                         handleBlur,
-                         touched,
-                         isSubmitting,
-                     }) => (
+            render={({handleChange, values, errors, handleBlur, touched, isSubmitting,}) => (
                 <>
                     <Form>
                         <ContactWrapper>
-
                             <ContactPagePay>
                                 <h2>Pay</h2>
                                 <Pay/>
                             </ContactPagePay>
-
                             <ContactPageTitle>
                                 <h2>Contact</h2>
                                 <p>
@@ -75,14 +67,14 @@ const Contact = () => {
                                             }`}
                                     />
                                     <Input
-                                        type="email"
-                                        name="email"
-                                        value={`${values.email}`}
+                                        type="kakaotalk"
+                                        name="kakaotalk"
+                                        value={`${values.kakaotalk}`}
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        label="Email"
+                                        label="kakaotalk"
                                         notification={`${
-                                            errors.email && touched.email ? errors.email : ''
+                                            errors.kakaotalk && touched.kakaotalk ? errors.kakaotalk : ''
                                             }`}
                                     />
                                 </InputGroup>

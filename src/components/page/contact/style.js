@@ -15,7 +15,7 @@ export const ContactWrapper = styled.div`
 `;
 
 export const ContactPageTitle = styled.div`
-  margin-bottom: 90px;
+  margin-bottom: 60px;
   @media (max-width: 990px) {
     margin-bottom: 60px;
   }
@@ -33,6 +33,9 @@ export const ContactPageTitle = styled.div`
       font-size: 22px;
       margin-bottom: 10px;
     }
+  }
+  p {
+    padding: 0 0 0 10px;
   }
 `;
 
