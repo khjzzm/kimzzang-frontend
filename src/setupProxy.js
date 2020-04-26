@@ -3,7 +3,7 @@ module.exports = function(app) {
     app.use(
         '/api',
         proxy({
-            target: "https://52.78.133.52",
+            target: "https://api.zzang.kim",
             changeOrigin: true,
         })
     );

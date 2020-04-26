@@ -26,6 +26,12 @@ React 컴포넌트 목록
 
 React에서 Redux 전에 배워야 할 8가지
 [https://edykim.com/ko/post/learn-react-before-using-redux/](https://edykim.com/ko/post/learn-react-before-using-redux/)
-
+  
 react router doesn't work in aws s3 bucket
 [https://stackoverflow.com/questions/51218979/react-router-doesnt-work-in-aws-s3-bucket](https://stackoverflow.com/questions/51218979/react-router-doesnt-work-in-aws-s3-bucket)
+
+리액트(ReactJS) 개발자가 걷게 되는 길
+[https://repo.yona.io/doortts/blog/post/297]https://repo.yona.io/doortts/blog/post/297
+
+[Atomic Design 적용한 폴더 구조]
+<img width="750" alt="atomic-design-folder" src="https://user-images.githubusercontent.com/11433560/73701258-4df11600-472c-11ea-9b67-f9b8693fca3f.png">
