@@ -40,8 +40,8 @@ const About  = () => {
     return (
         <AboutWrapper>
             <AboutPageTitle>
-                <h2></h2>
-                <p></p>
+                <h2>temp</h2>
+                <p>temp</p>
             </AboutPageTitle>
 
             <AboutImage>
