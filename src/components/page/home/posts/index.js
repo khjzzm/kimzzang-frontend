@@ -26,27 +26,27 @@ const Posts = () => {
         loading: false,
     });
 
-    useEffect(()=>{
+    useEffect(() => {
         _callPostList();
-    },[]);
+    }, []);
 
     const _callPostList = () => {
-        api.postsList().then(response =>{
+        api.postsList().then(response => {
             setPosts(response.data);
         });
-        api.postCnt().then(response =>{
+        api.postCnt().then(response => {
             setPostCnt(response.data);
         })
     };
 
     const _fetchMoreData = () => {
-        setload({ loading: true });
+        setload({loading: true});
 
         setTimeout(function () {
             setState((prev) => {
-                return { visibile: prev.visibile + 6 };
+                return {visibile: prev.visibile + 6};
             });
-            setload({ loading: false });
+            setload({loading: false});
         }, 1000);
     };
 
@@ -59,14 +59,11 @@ const Posts = () => {
 
             <PostRow>
                 <Masonry className="showcase">
-                    {posts.slice(0, state.visibile).map((post) => {
+                    {posts.slice(0, state.visibile).map((post, index) => {
                         return (
                             <PostCol key={post.id}>
-                                <ImageCard
-                                    title={post.title}
-                                    image={post.imagePath}
-                                    hashTag={["flash", "youtube"]}
-                                ></ImageCard>
+                                <ImageCard key={index} title={post.title} image={post.imagePath}
+                                           hashTag={["flash", "youtube"]}/>
                             </PostCol>
                         );
                     })}

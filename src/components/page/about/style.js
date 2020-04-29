@@ -3,12 +3,12 @@ import {themeGet} from '@styled-system/theme-get';
 
 export const AboutWrapper = styled.div`
   position: relative;
-  padding: 90px 75px 0 75px;
+  padding: 10px 75px 0 10px;
   @media (max-width: 990px) {
-    padding: 80px 45px 30px 45px;
+    padding: 10px 45px 10px 45px;
   }
   @media (max-width: 575px) {
-    padding: 60px 25px 0 25px;
+    padding: 10px 25px 0 10px;
   }
 `;
 
