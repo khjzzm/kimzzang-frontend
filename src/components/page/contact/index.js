@@ -15,7 +15,7 @@ import {
 
 
 const SignupSchema = Yup.object().shape({
-    firstName: Yup.string().required('Required'),
+    name: Yup.string().required('Required'),
     kakaotalk: Yup.string().required('Required'),
     message: Yup.string().required('Required'),
 });
@@ -24,7 +24,7 @@ const SignupSchema = Yup.object().shape({
 const Contact = () => {
     return (
         <Formik
-            initialValues={{firstName: '', kakaotalk: '', message: ''}}
+            initialValues={{name: '', kakaotalk: '', message: ''}}
             onSubmit={(values, actions) => {
                 setTimeout(() => {
                     console.log({values, actions});
@@ -55,17 +55,13 @@ const Contact = () => {
                                 <InputGroup>
                                     <Input
                                         type="text"
-                                        name="firstName"
-                                        value={`${values.firstName}`}
+                                        name="name"
+                                        value={`${values.name}`}
                                         onChange={handleChange}
                                         onBlur={handleBlur}
                                         label="Name"
                                         notification={`${
-                                            errors.firstName && touched.firstName
-                                                ? errors.firstName
-                                                : ''
-                                            }`}
-                                    />
+                                            errors.name && touched.name ? errors.name : '' }`}/>
                                     <Input
                                         type="kakaotalk"
                                         name="kakaotalk"
@@ -73,9 +69,7 @@ const Contact = () => {
                                         onChange={handleChange}
                                         onBlur={handleBlur}
                                         label="kakaotalk"
-                                        notification={`${
-                                            errors.kakaotalk && touched.kakaotalk ? errors.kakaotalk : ''
-                                            }`}
+                                        notification={`${ errors.kakaotalk && touched.kakaotalk ? errors.kakaotalk : '' }`}
                                     />
                                 </InputGroup>
                                 <Input
@@ -85,9 +79,7 @@ const Contact = () => {
                                     onChange={handleChange}
                                     onBlur={handleBlur}
                                     label="Message"
-                                    notification={
-                                        errors.message && touched.message ? errors.message : ''
-                                    }
+                                    notification={errors.message && touched.message ? errors.message : ''}
                                 />
                                 <Button
                                     title="Submit"
