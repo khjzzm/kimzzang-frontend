@@ -19,7 +19,7 @@ const Posts = () => {
     const [posts, setPosts] = useState([]);
     const [postCnt, setPostCnt] = useState(0);
     const [state, setState] = useState({
-        visibile: 6,
+        visibile: 3,
     });
 
     const [load, setload] = useState({
